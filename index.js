@@ -62,7 +62,7 @@ cron.schedule('* * * * *', async function () {
   await writeData();
 });
 const app = express();
-app.get('/api/currency', async (req, res) => {
+app.get('/', async (req, res) => {
   try {
     const filepath = './currency.json'
     fs.readFile(filepath, 'utf8', (err, data) => {
