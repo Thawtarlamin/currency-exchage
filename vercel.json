@@ -8,8 +8,8 @@
   ],
   "routes": [
     {
-      "src": "/api/currency",
-      "dest": "/api/currency"
+      "src": "/(.*)",
+      "dest": "/"
     }
   ]
 }
