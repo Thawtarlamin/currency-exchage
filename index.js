@@ -71,8 +71,6 @@ app.get('/api/currency', async (req, res) => {
           .json({
             'result': data
       });
-     
-    });
 
   } catch (error) {
     res.status(500).json({
