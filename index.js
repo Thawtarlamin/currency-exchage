@@ -63,34 +63,32 @@ cron.schedule('* * * * *', async function () {
 });
 const app = express();
 app.get('/api/currency', async (req, res) => {
-  // try {
-  //   const filepath = './currency.json'
-  //   fs.readFile(filepath, 'utf8', (err, data) => {
-  //     if (err) {
-  //       console.log(err)
+  try {
+    const filepath = './currency.json'
+    fs.readFile(filepath, 'utf8', (err, data) => {
+      // if (err) {
+      //   console.log(err)
 
-  //     }
-  //     try {
-  //       const jsonData = JSON.parse(data);
+      // }
+      // try {
+      //   const jsonData = JSON.parse(data);
                 
-  //       res.status(200)
-  //         .setHeader('Content-Type', 'application/json')
-  //         .json({
-  //           'result': jsonData
-  //         });
-  //     } catch (err) {
-  //       console.error(err);
-  //     };
-  //   });
+        res.status(200)
+          .setHeader('Content-Type', 'application/json')
+          .json({
+            'result': data
+          });
+      // } catch (err) {
+      //   console.error(err);
+      // };
+    });
 
-  // } catch (error) {
-  //   res.status(500).json({
-  //     error: error.toString()
-  //   })
-  // };
-  res.status(500).json({
-      "data":"hello"
+  } catch (error) {
+    res.status(500).json({
+      error: error.toString()
     })
+  };
+  
 });
 app.listen(8000, () => {
     console.log('running on port 8000')
