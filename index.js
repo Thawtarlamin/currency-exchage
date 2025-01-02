@@ -64,12 +64,26 @@ cron.schedule('* * * * *', async function () {
 const app = express();
 app.get('/api/currency', async (req, res) => {
   try {
-   var data = await main();
+    var mArray = [];
+  var us = await westernunion_scrape('us', 'usd', 'mmk');
+  var fr = await westernunion_scrape('fr', 'eur', 'mmk');
+  var sg = await westernunion_scrape('sg', 'sgd', 'mmk');
+  var jp = await westernunion_scrape('jp', 'jpy', 'mmk');
+  var gb = await westernunion_scrape('gb', 'gbp', 'mmk');
+  var au = await westernunion_scrape('au', 'aud', 'mmk');
+  var ca = await westernunion_scrape('ca', 'cad', 'mmk');
+  mArray.push(us);
+  mArray.push(fr);
+  mArray.push(sg);
+  mArray.push(jp);
+  mArray.push(gb);
+  mArray.push(au);
+  mArray.push(ca);
                 
     res.status(200)
           .setHeader('Content-Type', 'application/json')
           .json({
-            'result': data
+            'result': mArray
       });
 
   } catch (error) {
