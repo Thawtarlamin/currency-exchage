@@ -64,23 +64,14 @@ cron.schedule('* * * * *', async function () {
 const app = express();
 app.get('/api/currency', async (req, res) => {
   try {
-    const filepath = '../currency.json'
-    fs.readFile(filepath, 'utf8', (err, data) => {
-      // if (err) {
-      //   console.log(err)
-
-      // }
-      // try {
-      //   const jsonData = JSON.parse(data);
+   var data = await main();
                 
-        res.status(200)
+    res.status(200)
           .setHeader('Content-Type', 'application/json')
           .json({
             'result': data
-          });
-      // } catch (err) {
-      //   console.error(err);
-      // };
+      });
+     
     });
 
   } catch (error) {
