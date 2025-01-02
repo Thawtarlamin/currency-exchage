@@ -64,7 +64,7 @@ cron.schedule('* * * * *', async function () {
 const app = express();
 app.get('/api/currency', async (req, res) => {
   try {
-    const filepath = './currency.json'
+    const filepath = '../currency.json'
     fs.readFile(filepath, 'utf8', (err, data) => {
       // if (err) {
       //   console.log(err)
