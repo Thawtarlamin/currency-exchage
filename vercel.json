@@ -9,7 +9,7 @@
   "routes": [
     {
       "src": "/api/currency",
-      "dest": "/"
+      "dest": "/api/currency"
     }
   ]
 }
