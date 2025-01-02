@@ -1,0 +1,37 @@
+[
+  {
+    "currency": "USD",
+    "unit": "1 USD",
+    "mmk_price": "4463.0600"
+  },
+  {
+    "currency": "EUR",
+    "unit": "1 EUR",
+    "mmk_price": "4173.7320"
+  },
+  {
+    "currency": "SGD",
+    "unit": "1 SGD",
+    "mmk_price": "3283.5202"
+  },
+  {
+    "currency": "JPY",
+    "unit": "1 JPY",
+    "mmk_price": "28.4208"
+  },
+  {
+    "currency": "GBP",
+    "unit": "1 GBP",
+    "mmk_price": ""
+  },
+  {
+    "currency": "AUD",
+    "unit": "1 AUD",
+    "mmk_price": "2637.9878"
+  },
+  {
+    "currency": "CAD",
+    "unit": "1 CAD",
+    "mmk_price": "3084.2102"
+  }
+]
